@@ -1,10 +1,14 @@
-<div class="mx-16 grid grid-cols-1 md:flex lg:flex gap-8 md:mx-32 items-center h-32 justify-between">
+<nav class=" grid md:flex">
+
+<div class=" grid md:flex mx-16 items-center justify-between my-8 w-full">
     <div class="flex">
-        <img class="h-24" src="/assets/logo-1.png" alt="">
+        <a href="{{menu[0].ruta}}">
+            <img class="h-24" src="/assets/navbar/logo-header.png" alt="">
+        </a>
     </div>
-    <ul class="grid grid-col-1 md:flex md:gap-12 ">
-        <li><a class="hover:text-white font-bold" style="color: #EDBD85;" href="">Inicio</a></li>
-        <li><a class="hover:text-white font-bold" style="color: #EDBD85;" href="">Nosotros</a></li>
-        <li><a class="hover:text-white font-bold" style="color: #EDBD85;" href="">Contacto</a></li>
-    </ul>
+    <div class=" grid md:flex items-center justify-around gap-4 mt-3 md:mt-0">
+        <a *ngFor="let item of menu" href="{{item.ruta}}" class="text-lg text-primary hover:text-white">{{item.titulo}}</a>
+    </div>
 </div>
+
+</nav>

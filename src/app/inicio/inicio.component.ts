@@ -51,17 +51,17 @@ export class InicioComponent implements OnInit {
 
   autos = [
     {
-      image:'/assets/sedan.jpg',
+      image:'/assets/inicio/sedan.jpg',
       title:'SEDAN',
       features:'Capacidad de 2 - 3 pasajeros'
     },
     {
-      image:'/assets/suburban.jpg',
+      image:'/assets/inicio/suburban.jpg',
       title:'SUBURBAN',
       features:'Capacidad de 4 - 7 pasajeros'
     },
     {
-      image:'/assets/van.jpg',
+      image:'/assets/inicio/van.jpg',
       title:'VAN',
       features:'Capacidad de 8 - 11 pasajeros'
     }

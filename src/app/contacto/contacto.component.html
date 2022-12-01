@@ -1,1 +1,63 @@
-<p>contacto works!</p>
+<section
+    class="w-screen h-screen bg-cover bg-center bg-no-repeat relative bg-white">
+
+    <div class="flex flex-col z-0 static w-ful">
+
+        <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path class="fill-indigo-700" fill="#4338CA" fill-opacity="1" d="M0,256L60,266.7C120,277,240,299,360,282.7C480,267,600,213,720,186.7C840,160,960,160,1080,186.7C1200,213,1320,267,1380,293.3L1440,320L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+        <app-navbar class="z-10 absolute w-full "></app-navbar>
+    </div>
+
+    <div class="flex w-fit p-2 mx-16 -mt-16">
+
+        <div class="flex flex-col gap-4 w-[60%] px-40 mt-8">
+            <span class="text-indigo-700 text-3xl font-sembibold">Contacto:</span>
+            <p class="text-indigo-700 text-lg font-regular">
+                Nos encantaría saber de ti. 
+                Compártenos tu próximo evento o próxima visita para poder ofrecerte la mejor opción de trasladarte a tu destino. 
+                Con gusto estaremos en contacto contigo.       
+            </p>        
+        </div>
+        <div class="flex w-full">
+            
+            <form [formGroup]="form" class="rounded-md bg-indigo-700 flex flex-col gap-4 p-4 w-fit">
+
+                <div class="flex text-white text-lg font-bold">Escríbenos:</div>
+
+                <div class="flex gap-4">
+
+                    <div class="flex flex-col">
+                        <label for="nombre" class="text-white tex-md font-semibold">Nombre completo:</label>
+                        <input formControlName="nombre" type="text" class="p-2 rounded-md text-indigo-700" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="correo" class="text-white tex-md font-semibold">Coreo electrónico:</label>
+                        <input formControlName="correo" type="email" class="p-2 rounded-md text-indigo-700" placeholder="Ex: name@mail.com">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="telefono" class="text-white tex-md font-semibold">Número telefónico:</label>
+                        <input formControlName="telefono" type="tel" class="p-2 rounded-md text-indigo-700" placeholder="Ex: +52 415 123 2233">
+                    </div>
+
+                </div>
+                <div class="flex flex-col gap-4">
+
+                    <div class="flex flex-col">
+                        <label for="telefono" class="text-white tex-md font-semibold">Mensaje:</label>
+                        <textarea formControlName="mensaje" class="p-2 rounded-md text-indigo-700" placeholder="Ingrese su mensaje" name="mensaje" id="" cols="30" rows="3"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-end">
+                    <button (click)="enviar()" class="border-white border p-2 rounded-md text-white text-lg font-semibold hover:border-primary hover:text-primary">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</section>
+
+<app-footer class="w-screen"></app-footer>

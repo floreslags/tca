@@ -1,1 +1,63 @@
-<p>nosotros works!</p>
+<section style="background-image: url(/assets/nosotros/cover02.jpg);"
+    class="w-screen h-screen bg-cover bg-center bg-no-repeat relative">
+
+    <div class="flex flex-col z-0 static w-ful">
+
+        <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path class="fill-indigo-700" fill="#4338CA" fill-opacity="1" d="M0,256L60,266.7C120,277,240,299,360,282.7C480,267,600,213,720,186.7C840,160,960,160,1080,186.7C1200,213,1320,267,1380,293.3L1440,320L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+        <app-navbar class="z-10 absolute w-full "></app-navbar>
+    </div>
+
+    <div class="mt-24">
+
+        <div class="flex flex-col gap-12 p-2 mx-32">
+
+            <div class="flex justify-start">
+
+                <p class="flex text-white rounded-md p-4 text-start -mt-20 font-semibold text-xl md:text-2xl w-[70%] md:w-[40%] ">
+                    Somos una empresa Sanmiguelense de transportes especializada en la gestión y coordinación de logística de transporte en el bajío y todo México.
+                </p>
+
+            </div>
+
+            <div class="flex justify-end">
+
+                <p class="flex text-white rounded-md p-4 text-start -mt-20 font-semibold text-xl md:text-2xl w-[70%] md:w-[30%]">
+                Ofrecemos todos los servicios de traslado de una forma rápida y segura, a a nivel local, regional y nacional.            </p>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="bg-white w-screen h-screen  grid md:flex md:flex-col items-start justify-center p-4">
+
+    <div class="flex mx-16 flex-col gap-4">
+        <span class="text-indigo-700 p-2 rounded-md text-2xl font-bold w-fit">Nuestros Valores</span>
+    </div>
+
+    <div class="grid md:grid-cols-3 items-center justify-center  gap-4 mt-8 mx-16 w-full">
+
+        <div *ngFor="let item of valores" class=" bg-indigo-700 rounded-md flex flex-col  w-[40%] md:w-[70%] p-4 h-52 gap-4">
+
+            <div class="flex">
+                <span class="text-primary text-xl font-semibold">{{item.titulo}}</span>
+            </div>
+            <div class="flex">
+                <span class="text-white text-xl font-regular">{{item.contenido}}</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<app-footer class="w-screen"></app-footer>
+

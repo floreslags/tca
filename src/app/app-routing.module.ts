@@ -5,11 +5,15 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 
 const routes: Routes = [
-  {path:'inicio',component:InicioComponent},
-  {path:'nosotros',component:NosotrosComponent},
-  {path:'contacto',component:ContactoComponent},
-  {path:'',redirectTo:'inicio',pathMatch:'full'}
-
+  {
+    path:'',children:[
+      {path:'inicio',component:InicioComponent},
+      {path:'nosotros',component:NosotrosComponent},
+      {path:'contacto',component:ContactoComponent},
+      {path:'',redirectTo:'inicio',pathMatch:'full'},
+      {path:'**',redirectTo:'inicio',pathMatch:'full'}
+    ]
+  }
 ];
 
 @NgModule({
